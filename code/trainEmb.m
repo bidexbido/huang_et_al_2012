@@ -152,7 +152,7 @@ for filei = 1:numFiles
         
         temp = sparse(ones(1,length(allSNum2{1})),allSNum2{1}(:),idf(allSNum2{1}(:)),1,length(idf));
         temp2 = temp./sum(temp);
-        tf(:,i) = temp2;
+        tf(:,i) = temp2';
     end
     allNgrams(:,last+1:end) = [];
     doc(last+1:end) = [];
